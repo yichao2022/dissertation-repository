@@ -13,4 +13,3 @@ This repository contains the dissertation and defense materials for **Yichao Jin
 **Behavioral AI Architect** | Behavioral Economics | Public Policy | Smart Grid Optimization
 
 ---
-*Created and maintained with OpenClaw.*
