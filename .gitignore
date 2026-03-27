@@ -1,0 +1,16 @@
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.fdb_latexmk
+*.fls
+*.gz
+*.pdf
+!Defense_Slides.pdf
+!JMP_Full_Text.pdf
+!slides/main.pdf
+!dissertation/sample.pdf
+.DS_Store
+__pycache__/

@@ -1,0 +1,145 @@
+\documentclass[10pt, aspectratio=169, xcolor={svgnames}]{beamer}
+
+% --- UTD Official Color Palette (Expanded from GitHub Template) ---
+\definecolor{utdorange}{RGB}{232,117,0}
+\definecolor{utdgreen}{RGB}{18,71,52}
+\definecolor{utdcyan}{RGB}{95,244,183}
+\definecolor{utdcyangray}{RGB}{138,141,143}
+
+% --- Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{booktabs} % For professional tables
+\usetikzlibrary{shadows, positioning}
+
+% --- Beamer Theme & Branding Integration ---
+\usetheme{Madrid}
+\setbeamertemplate{navigation symbols}{}
+
+% Standardize Colors for Beamer Elements (Blocks, Bullets, Titles)
+\setbeamercolor*{structure}{fg=utdgreen}
+\setbeamercolor*{palette primary}{fg=white, bg=utdgreen}
+\setbeamercolor*{palette secondary}{fg=white, bg=utdorange}
+\setbeamercolor*{palette tertiary}{fg=white, bg=utdgreen!80!black}
+\setbeamercolor{titlelike}{parent=palette primary, fg=white, bg=utdorange}
+\setbeamercolor{frametitle}{bg=utdorange, fg=white}
+\setbeamercolor{block title}{bg=utdgreen, fg=white}
+\setbeamercolor{block body}{bg=utdgreen!10, fg=black}
+
+% Headline (Top Border) - Consistent with UTD Branding
+\setbeamertemplate{headline}{
+  \hbox{%
+  \begin{beamercolorbox}[wd=0.3\paperwidth,ht=2.5ex,dp=1.125ex]{utdgreen}%
+    {\color{utdgreen}\rule{\linewidth}{2.5ex}}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=0.7\paperwidth,ht=2.5ex,dp=1.125ex]{utdorange}%
+    {\color{utdorange}\rule{\linewidth}{2.5ex}}
+  \end{beamercolorbox}}
+}
+
+% Footline - Three-segment dynamic blocks
+\setbeamertemplate{footline}{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.3333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot} \color{white} Yichao Jin (UTD)
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.3334\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot} \color{white} Vaccination Timing DCE
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.3333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot} \color{white} \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \begin{tikzpicture}[remember picture, overlay]
+    \fill[utdgreen] (current page.south west) rectangle ([xshift=0.3333\paperwidth, yshift=3.25ex]current page.south west);
+    \fill[utdorange] ([xshift=0.3333\paperwidth]current page.south west) rectangle ([xshift=0.6667\paperwidth, yshift=3.25ex]current page.south west);
+    \fill[black!80] ([xshift=0.6667\paperwidth]current page.south west) rectangle (current page.south east);
+  \end{tikzpicture}
+}
+
+% Metadata
+\title{Intertemporal Choice in Vaccination Timing}
+\author{Yichao Jin}
+\date{April 2026}
+
+\begin{document}
+
+% --- Slide 1: Refined Title Page (UTD Professional Style) ---
+\begin{frame}[plain]
+    \begin{tikzpicture}[remember picture, overlay]
+        % Background Watermark (Monogram or Crest - Optional Opacity)
+        \node[opacity=0.05, anchor=center] at (current page.center) {
+            \includegraphics[width=0.4\paperwidth]{example-image-golden} % Placeholder for UTD Monogram
+        };
+
+        % Center Title Box (Main Focus)
+        \node[anchor=center, fill=utdorange, rounded corners=5pt, drop shadow, inner sep=18pt, text width=0.88\paperwidth, align=center] at (current page.center) {
+            {\Large \bfseries \color{white} Intertemporal Choice in Vaccination Timing: A DCE Approach}\\[0.4cm]
+            {\normalsize \color{white} Evidence from a Discrete Choice Experiment in Wuhan}\\[0.6cm]
+            {\footnotesize \scshape \color{white} Dissertation Defense for PhD in Public Policy and Political Economy}
+        };
+
+        % Top Left: UTD Branding (Textual or Logo Placeholder)
+        \node[anchor=north west, xshift=0.5cm, yshift=-1cm] at (current page.north west) {
+            \begin{tabular}{l}
+                {\small \bfseries \color{utdgreen} THE UNIVERSITY OF TEXAS AT DALLAS} \\
+                {\scriptsize \color{utdcyangray} School of Economic, Political and Policy Sciences}
+            \end{tabular}
+        };
+
+        % Bottom Right: Committee Info
+        \node[anchor=south east, xshift=-0.5cm, yshift=0.8cm] at (current page.south east) {
+            \scriptsize
+            \begin{tabular}{rl}
+                \textbf{Dissertation Committee:} & \\
+                \textcolor{utdgreen}{Dohyeong Kim} & (Chair) \\
+                Richard Scotch & \\
+                Soyoung Kwon & \\
+                Khai Chiong &
+            \end{tabular}
+        };
+
+        % Bottom Left: Presenter Info
+        \node[anchor=south west, xshift=0.8cm, yshift=0.8cm] at (current page.south west) {
+            \begin{tabular}{l}
+                {\normalsize \textbf{Yichao Jin}} \\
+                {\footnotesize April 2026}
+            \end{tabular}
+        };
+    \end{tikzpicture}
+\end{frame}
+
+% --- Slide 2: Table of Contents ---
+\begin{frame}{Roadmap}
+    \tableofcontents
+\end{frame}
+
+\section{Introduction}
+
+% --- Slide 3: Research Problem (Inheriting Colors) ---
+\begin{frame}{Research Problem}
+    \begin{itemize}
+        \item \textbf{Global Challenge:} Timing is critical in pandemic response.
+        \item \textbf{Individual Decision-making:} Why do people delay vaccination?
+        \item \textbf{Current Gap:} Limited understanding of time preferences in health behavior models.
+    \end{itemize}
+    
+    \begin{block}{Core Conflict}
+        Balancing immediate costs (side effects, time) vs. future benefits (protection, social mobility).
+    \end{block}
+\end{frame}
+
+\section{Research Questions}
+
+% --- Slide 4: Research Questions ---
+\begin{frame}{Research Questions}
+    \begin{enumerate}
+        \item How does \textbf{time delay} affect the perceived utility of different vaccines?
+        \item Does \textbf{intertemporal discounting} vary across socio-demographic groups?
+        \item Can specific \textbf{policy incentives} nudge early vaccination?
+    \end{enumerate}
+\end{frame}
+
+\end{document}
