@@ -45,10 +45,10 @@
   \leavevmode%
   \hbox{%
   \begin{beamercolorbox}[wd=.3333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
-    \usebeamerfont{author in head/foot} \color{white} Yichao Jin (UTD)
+    \usebeamerfont{author in head/foot} \color{white} Author Name (UTD)
   \end{beamercolorbox}%
   \begin{beamercolorbox}[wd=.3334\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
-    \usebeamerfont{title in head/foot} \color{white} Vaccination Timing DCE
+    \usebeamerfont{title in head/foot} \color{white} Short Title of Your Work
   \end{beamercolorbox}%
   \begin{beamercolorbox}[wd=.3333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
     \usebeamerfont{date in head/foot} \color{white} \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
@@ -81,19 +81,19 @@
         \node[anchor=center, yshift=0.5cm] at (current page.center) {
             \begin{minipage}{0.9\paperwidth}
                 \centering
-                {\Huge \bfseries \color{utdgreen} Intertemporal Choice in Vaccination Timing} \\[0.4cm]
-                {\Large \color{utdorange} A Discrete Choice Experiment Approach} \\[0.8cm]
+                {\Huge \bfseries \color{utdgreen} Your Dissertation Title Here} \\[0.4cm]
+                {\Large \color{utdorange} Subtitle or Specific Research Focus} \\[0.8cm]
                 \textcolor{utdgreen}{\rule{0.6\textwidth}{1.2pt}} \\[0.8cm]
-                {\large \scshape Dissertation Defense: Evidence from Wuhan, China}
+                {\large \scshape Dissertation Defense: Location or Context}
             \end{minipage}
         };
 
         % Presenter Info (Bottom Left)
         \node[anchor=south west, xshift=1cm, yshift=1.2cm] at (current page.south west) {
             \begin{tabular}{l}
-                {\large \textbf{Yichao Jin}} \\
-                {\footnotesize Candidate for PhD in Public Policy and Political Economy} \\
-                {\footnotesize April 2026}
+                {\large \textbf{Author Name}} \\
+                {\footnotesize Candidate for PhD in [Your Program]} \\
+                {\footnotesize [Month Year]}
             \end{tabular}
         };
 
@@ -102,10 +102,10 @@
             \scriptsize
             \begin{tabular}{rl}
                 \textbf{Dissertation Committee:} & \\
-                \textcolor{utdgreen}{Dohyeong Kim} & (Chair) \\
-                Richard Scotch & \\
-                Soyoung Kwon & \\
-                Khai Chiong &
+                \textcolor{utdgreen}{Professor A} & (Chair) \\
+                Professor B & \\
+                Professor C & \\
+                Professor D &
             \end{tabular}
         };
         
@@ -230,23 +230,23 @@
 
 \section{Essay 1: Results and Discussion}
 
-% --- Slide 9: Results I: Model Performance ---
-\begin{frame}{Results I: Model Performance and Fit}
+% --- Slide 9: Results I: Model Performance (Example Table) ---
+\begin{frame}{Results I: Model Performance and Fit (Template Example)}
     \begin{itemize}
-        \item \textbf{Comparison:} Comparison of Multinomial Logit (MNL) vs. Mixed Logit (MXL).
-        \item \textbf{Statistical Superiority:} MXL significantly outperforms MNL ($p < 0.001$).
-        \item \textbf{Conclusion:} Significant preference heterogeneity exists; modeling it is crucial for accurate valuation.
+        \item \textbf{Comparison:} Comparison of Model A vs. Model B.
+        \item \textbf{Statistical Superiority:} Model B significantly outperforms Model A.
+        \item \textbf{Conclusion:} Your key takeaway regarding model fit.
     \end{itemize}
     \begin{table}
         \centering
         \small
         \begin{tabular}{lcc}
             \toprule
-            Metric & Multinomial Logit (MNL) & Mixed Logit (MXL) \\
+            Metric & Model A (Baseline) & Model B (Proposed) \\
             \midrule
-            Log-Likelihood & -6096.612 & \textbf{-5615.522} \\
-            AIC & 12207.225 & \textbf{11245.044} \\
-            Obs. (N $\times$ T) & 6,162 & 6,162 \\
+            Log-Likelihood & -X,XXX.XXX & \textbf{-X,XXX.XXX} \\
+            AIC & XX,XXX.XXX & \textbf{XX,XXX.XXX} \\
+            Obs. (N $\times$ T) & X,XXX & X,XXX \\
             \bottomrule
         \end{tabular}
     \end{table}
@@ -287,27 +287,27 @@
     \vfill
 \end{frame}
 
-% --- Slide 11: Results II: Quantifying Present Bias (Kappa) ---
-\begin{frame}{Results II: Quantifying Present Bias}
+% --- Slide 11: Results II: Quantifying Key Parameters ---
+\begin{frame}{Results II: Quantifying Key Parameters}
     \begin{columns}[T]
         \column{0.5\textwidth}
         \begin{block}{Parameter Estimates}
             \begin{itemize}
-                \item $\hat{\delta} = 0.160$ (Baseline Discounting)
-                \item $\hat{\kappa} = 0.225$ (Present Bias Factor)
+                \item $\hat{\alpha} = 0.XXX$ (Description)
+                \item $\hat{\beta} = 0.XXX$ (Description)
             \end{itemize}
         \end{block}
         \column{0.5\textwidth}
-        \begin{alertblock}{The Meaning of $\kappa$}
+        \begin{alertblock}{Interpretation}
             \begin{itemize}
-                \item $\kappa < 1$ confirms \textbf{Present Bias}.
-                \item Significant drop in perceived value for even a 1-month delay.
+                \item Discuss the significance of the results.
+                \item Relate back to your core hypothesis.
             \end{itemize}
         \end{alertblock}
     \end{columns}
     \centering
     \vspace{0.5cm}
-    \textit{Conclusion: Vaccination delay is not just a logistical hurdle, but a behavioral barrier.}
+    \textit{Conclusion: A concise summary of what these numbers imply for your theory.}
 \end{frame}
 
 % --- Slide 12: Results III: The BDM ---
